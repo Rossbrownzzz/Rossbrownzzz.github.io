@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+	<style>
+		ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		}
+
+		li {
+		float: left;
+		}
+
+		li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		}
+
+		li a:hover {
+		background-color: #111;
+		}
+		
+		.active {
+  		background-color: #aa3904;
+		}
+	</style>
+
+
 	<title>Ross Brown</title>
 
-
 	<body>
+
+		<ul>
+			<li><a class="active" href="index.html">Home</a></li>
+			<li><a href="resume.html">Resumé</a></li>
+			<li style="float:right"><a href="#about">Maybe you want a right-align?</a></li>
+		</ul>
+
+
 		<header>
 			<h1>Ross Brown</h1>
 		</header>
-		</nav>
 		<br>
 		<br>
 		<br>
@@ -17,10 +54,20 @@
 		<center><h4>ideas bouncing around. Maybe I'll use it as a place to host descriptions and pictures</h4></center>
 		<center><h4>of projects I've worked on! Might also use it to store my resume and act as a virtual</h4></center>
 		<center><h4>version of it. I might try making some kind of a web game on here?</h4></center>
+		
+		
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
+
+
+
+		<script>
+			document.getElementById("myButton").onclick = function () {
+        	location.href = "resume.html";
+    		};
+		</script>
 	</body>
 </html>
