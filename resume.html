@@ -1,52 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	<style>
-		ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		background-color: #333;
-		}
+	<link href="style.css" rel="stylesheet">
 
-		li {
-		float: left;
-		}
-
-		li a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-		}
-
-		li a:hover {
-		background-color: #111;
-		}
-		
-		.active {
-  		background-color: #aa3904;
-		}		
-		
-		.active:hover {
-			background-color: #aa0101;
-		}
-
-		.button {
-		border: none;
-		color: white;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 4px 2px;
-		cursor: pointer;
-		background-color:#aa3904;
-		}
-
-	</style>
 
 	<title>Resume soon!</title>
     <body>
@@ -59,5 +14,37 @@
 
 		<h1>PDF of resume or interactive version...</h1>
 		<a href="Ross_Brown_ResumeW_2022.pdf" class="button">Give me the PDF!</a>
+
+
+		<button class="collapsible">Internship</button>
+		<div class="content">
+  			<p>I did an internship with John Deere</p>
+			  <button class="collapsible">inside button</button>
+			  <div class="content">
+				<p>TESTING</p>
+			  </div>
+		</div>
+
+
+
+		<!figure out what to do about internal collapsibles. Right now they don't work>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+				  content.style.maxHeight = null;
+				} else {
+				  content.style.maxHeight = content.scrollHeight + "px";
+				} 
+			  });
+			}
+			</script>
+			
+
     </body>
 </html>
