@@ -55,7 +55,7 @@ li a:hover {
     font-size: 15px;
     }
 
-.active, .collapsible:hover {
+button.active, .collapsible:hover {
   background-color: #555;
     }
 
