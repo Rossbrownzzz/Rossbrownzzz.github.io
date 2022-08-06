@@ -1,3 +1,24 @@
+:root {
+    --button_color: #aa3904;
+    --active_button_color: #aa0101;
+}
+
+/* Cool idea, if screen is small make menu behave differently. help at https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+@media screen and (max-width: 600px) {
+    .li a {
+      float: none;
+      width: 100%;
+    }
+  }
+*/
+
+
+/*another idea, if dark mode change colors. help at https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+@media (prefers-color-scheme: dark) {
+    .avtive   { background-color:  #f1f1f1; }
+  }
+  */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -18,6 +39,7 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
     }
 
 li a:hover {
@@ -25,11 +47,12 @@ li a:hover {
     }
     
 .active {
-    background-color: #aa3904;
-    }		
+    background-color: var(--button_color);
+    }
+
     
 .active:hover {
-    background-color: #aa0101;
+    background-color: var(--active_button_color);
     }
 
 .button {
@@ -42,11 +65,11 @@ li a:hover {
     font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color:#aa3904;
+    background-color: var(--button_color);
     }
 
 .button:hover {
-        background-color: #aa0101;
+        background-color: var(--active_button_color);
         }
 
 .collapsible {
