@@ -4,6 +4,7 @@
 }
 
 /* Cool idea, if screen is small make menu behave differently. help at https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+    NO DON DO THAT, better way to do it. Look up how to detect if a browser is mobile, css
 @media screen and (max-width: 600px) {
     .li a {
       float: none;
