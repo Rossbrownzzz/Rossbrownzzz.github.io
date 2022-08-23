@@ -3,28 +3,43 @@
 	<link href="style.css" rel="stylesheet">
 
 
-	<title>Resume soon!</title>
+	<title>Ross Brown Resumé</title>
     <body>
 		
         <ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a class="active" href="resume.html">Resumé</a></li>
-			<li><a href="readings.html">Cool Readings</a></li>
+			<li><a href="readings.html">Recent Readings</a></li>
 			<li style="float:right"><a>Maybe you want a right-align?</a></li>
 		</ul>
 
-		<h1>PDF of resume or interactive version...</h1>
-		<a href="Ross_Brown_ResumeW_2022.pdf" class="button">PDF version!</a>
+		<h1 style="font-size: 30px;">Some of the projects I've worked on that I'm particularly proud of with a bit more detail! Or, if you'd like the PDF, go right ahead.</h1>
+		<a href="Ross_Brown_ResumeW_2022.pdf" class="button">Open PDF version!</a>
 
 
 		<button class="collapsible">Internship</button>
 			<div class="content">
+				<img src="DeereTeam.png" style="float:right; padding-left: 10px; padding-right: 10px;" width="35%">
 				<p>I had the opportunity to work as a software development engineer intern at John Deere in the summer of 2022. I worked on two 
-					projects 
-				</p><p>
-					The first project I worked on was developing a program to help categorize support tickets to ensure they were going to the 
-					correct support group. To achieve this, I employed natural language processing and neural networks.
-					</p>
+					projects, one in machine learning and the other in cyber-security.
+				</p>
+				<p>
+					My primary project was developing a program to help categorize support tickets to ensure they were going to the 
+					correct support group. This was particularly pressing as support was becoming a monster consuming roughly 30% sprint velocity for my team. 
+					To help achieve this, I employed natural language processing and neural networks. I used a simple feedforward neural network with a categorical crossentropy 
+					loss function training on tokenized versions of the tickets. A simple GUI using TKinter allowed the user to request classification of new tickets.
+				</p>
+				<p>
+					Another task related to the support tickets was finding similar tickets to the ones the user was inputting to help quantify the support impact of 
+					different applications rather than relying on tribal knowledge to diagnose weak points. This would also allow the user to see the most similar tickets to the one 
+					they provided which enables them to determine if there is already a solution to a similar issue which can be used to guide the process. To do this I represented 
+					tickets using term frequency inverse document frequency transformations before calculating cosine similarities.
+				</p>
+				<p>
+					The second project that I took on was resolving some of the cyber-security vulnerabilities facing the team. Across the teams 6 web applications developed 
+					over 10 years ago I was able to resolve around 500 cyber-security vulnerabilities. The resolution I found most interesting was using prepared statements in place 
+					of SQL queries to circumvent SQL injection attempts by compiling the query before parameters are added and the query is executed.
+				</p>
 			</div>
 
 		<button class="collapsible">Research</button>
@@ -79,8 +94,8 @@
 					</div>
 			</div>
 
-		</body>
-		</html>
+	</body>
+</html>
 		<script>
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
