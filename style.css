@@ -1,10 +1,11 @@
 :root {
-    --button_color: #aa3904;
-    --active_button_color: #aa0101;
+    --active_button_color: #aa3904;
+    --button_color: #aa0101;
     --page_background_color: #f1f1f1;
     --other_text_color: #ffffff;
     --text_on_bg_color: #111;
     --navBar_color: #333;
+    --navBar_hover_color: #111;
     --collapsible_color: #777;
     --open_collapsible_color: #555;
 
@@ -13,12 +14,13 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --button_color: #aa3904;
-        --active_button_color: #aa0101;
+        --avtive_button_color: #aa3904;
+        --button_color: #aa0101;
         --page_background_color: #0D1117;
         --text_on_bg_color: #c9d1d9;
         --other_text_color: #f0f6fc;
-        --navBar_color: #161B22;
+        --navBar_color: #191f27;
+        --navBar_hover_color: #212935;
         --collapsible_color: #13233A;
         --open_collapsible_color: #1c3453;
     }
@@ -64,7 +66,7 @@ li a {
     }
 
 li a:hover {
-    background-color: #111;
+    background-color: var(--navBar_hover_color);
     }
     
 .active {
