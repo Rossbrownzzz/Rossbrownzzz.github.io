@@ -138,6 +138,14 @@ body {
     background-color: var(--page_background_color);
     color: var(--text_on_bg_color);
     font-size: 1.1rem;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+html{
+    background-color: var(--page_background_color);
+    height: 100%;
 }
 
 
