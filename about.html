@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<link href="style.css" rel="stylesheet">
+
+
+	<title>Ross Brown Resumé</title>
+    <body>
+		
+        <ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a class="active" href="about.html">About Me</a></li>
+			<li><a href="resume.html">Resumé</a></li>
+		</ul>
+		
+
+		<center><h1>Learn about my skills and experiences below!</h1></center>
+
+
+		<button class="collapsible">Internship With John Deere</button>
+			<div class="content">
+				<img src="resources/DeereTeam.jpg" style="float:right; padding-left: 10px; padding-right: 10px;" width="35%">
+				<p>
+					I had the opportunity to work as a software development engineer intern at John Deere in the summer of 2022. I worked on two 
+					projects, one in machine learning and the other in cyber-security.
+				</p>
+				<p>
+					My primary project was developing a program to help categorize support tickets to ensure they were going to the correct 
+					support group. This was particularly pressing as support was becoming a monster consuming roughly 30% sprint velocity for 
+					my team. To help achieve this, I employed natural language processing and neural networks. I used a simple feedforward 
+					neural network with a categorical cross entropy loss function training on tokenized versions of the tickets. A simple GUI 
+					using TKinter allowed the user to request classification of new tickets.
+				</p>
+				<p>
+					Another task related to the support tickets was finding similar tickets to the ones the user was inputting to help quantify 
+					the support impact of different applications rather than relying on tribal knowledge to diagnose weak points. This would 
+					also allow the user to see the most similar tickets to the one they provided which enables them to determine if there is 
+					already a solution to a similar issue which can be used to guide the process. To do this I represented tickets using term 
+					frequency inverse document frequency transformations before calculating cosine similarities.
+				</p>
+				<p>
+					The second project that I took on was resolving some of the cyber-security vulnerabilities facing the team. Across the 
+					teams 6 web applications developed over 10 years ago I was able to resolve around 500 cyber-security vulnerabilities. The 
+					resolution I found most interesting was using prepared statements in place of SQL queries to circumvent SQL injection 
+					attempts by compiling the query before parameters are added and the query is executed.
+				</p>
+			</div>
+
+		<button class="collapsible">Undergraduate Research</button>
+			<div class="content">
+				<button class="collapsible">Gomes Lab</button>
+					<div class="content">
+						<p>
+							I joined the Gomes lab in October of 2019 as an undergraduate research assistant. Our work largely focused on 
+							molecular property prediction using neural networks. Initially we worked on predicting carbon monoxide
+							binding energies on different catalytic surfaces as a step in carbon dioxide breakdown. Our models were created in 
+							PyTorch and trained on data like the Open Quantum Materials Database.
+						</p>
+						<p>
+							We used supervised and self-supervised pretraining methods to improve the perofrmance of our neural network including
+							things like context prediction.
+						</p>
+					</div>
+				<button class="collapsible">Wang Lab</button>
+					<div class="content">
+						<p>lab 2</p>
+					</div>
+			</div>
+
+		<button class="collapsible">Course Projects</button>
+			<div class="content">
+				<button class="collapsible">Internet of Things</button>
+					<div class="content">
+						<p>
+							iot
+						</p>
+					</div>
+				<button class="collapsible">Machine Learning</button>
+					<div class="content">
+						<embed src= "resources/Machine_Learning_Project_Report.pdf" style="float:right; padding-left: 10px; padding-right: 10px;" width= "50%" height="500px" type="application/pdf"></embed>
+						<p>
+							In fall of 2021 I did an individual course project in my graduate AI/ML class where I used chest radiographs to 
+							predict various 
+							lung observations. We used the CheXpert dataset, and had the option of either starting from raw images or using 
+							extracted features provided by our professor from his work with the deepAUC team. I chose to use raw images because 
+							I was interested in getting experience with convolutional neural networks, even if it required extra legwork.
+						</p>
+						<p>
+							I used a DenseNet-121 architecture with hyperparameters selected by Bayesian optimization. Raw images were also 
+							augmented by rotating positive or negative degrees, translating left and right, or scaling up and down. 
+							There were a large number of uncertain labels in the data, so another major aspect of my project was handling 
+							uncertain data in different ways.
+						</p>
+						<p>
+							This course project was highly successful. Being the only student starting from raw images as far as I know, 
+							an undergraduate student, and working on the project individually I was able to achieve the 3rd best AUC score on 
+							the test dataset. My model had an AUC of 0.88, only behind models achieving 0.89. Additionally, on a personal level 
+							it was a great way to gain experience with convolutional neural networks.
+						</p>
+					</div>
+				<button class="collapsible">Embedded Systems</button>
+					<div class="content">
+						<video width="50%" controls style="float:left; padding-left: 10px; padding-right: 10px;">
+							<source src="resources/es_proj.mp4" type="video/mp4">
+						  </video>
+						<p>
+							Spring of 2022 I took a course on embedded systems. For our course project my partner and I developed a rotating 
+							platform for firing a nerf dart remotely. All code was written in C and run on two Arduinos. The first Arduino 
+							received input from the joystick using analog to digital conversion and then generated commands to transmit from 
+							the master HC-06 Bluetooth transiever using USART communication. 
+						</p>
+						<p>
+							The second Arduino received the commands, parsed them, and then controlled all of the functionality for the platform. 
+							We used a stepper motor for the rotation of the platform, allowing for adjustable speed and full rotation. 
+							When the joystick was pressed the the Arduino started a PWM signal to the servo motor, causing it to start rotating. 
+							The motor was connected to the blaster trigger by fishing line which would pull back far enough to fire 
+							when fully extended. The platform was built from scrap wood I had from other woodworking projects, and the stepper 
+							motor had a 3d printed mount connecting it to the platform. All non-wood components were held to the platform with 
+							zip ties.
+						</p>
+					</div>
+				<button class="collapsible">Database Systems</button>
+					<div class="content">
+						<p>
+							website data fetcher Spring 2022
+						</p>
+					</div>
+				<button class="collapsible">Software Design</button>
+					<div class="content">
+						<p>Trivia game</p>
+					</div>
+			</div>
+
+		<button class="collapsible">Past Employment</button>
+			<div class="content">
+				<button class="collapsible">Plumber</button>
+					<div class="content">
+						<p>
+							Nelson and Sons Plumbing and Heating - Iowa City, Iowa
+						</p>
+						<p>
+							During my time as a plumber, I honed my problem-solving skills and attention to detail, which are essential 
+							traits in the field of software engineering. I learned to analyze complex systems, identify issues, and develop 
+							efficient solutions. The ability to troubleshoot and apply logical thinking that I acquired as a plumber translates 
+							directly to debugging and resolving software-related issues.
+						</p>
+					</div>
+				<button class="collapsible">Teacher of English as a Second Language</button>
+					<div class="content">
+						<p>
+							Lincoln English Center - Los Reyes Michoacan, Mexico
+						</p>
+						<p>Teaching English as a second language enhanced my ability to explain complex concepts and adapt my teaching methods 
+							to meet diverse learning needs. These skills are directly transferable to software engineering, as effective 
+							communication and the ability to simplify technical concepts are vital when collaborating with colleagues or 
+							presenting solutions to non-technical stakeholders. Moreover, my experience in curriculum design and lesson 
+							planning instilled in me a structured and organized approach, which is beneficial when developing software 
+							systems and writing clean, maintainable code.</p>
+					</div>
+				<button class="collapsible">Farmer</button>
+					<div class="content">
+						<p>
+							Leach Fields LLC - West Liberty, Iowa
+						</p>
+						<p>As a farmer, I developed a strong work ethic and perseverance, which are crucial attributes in software engineering. 
+							Managing a farm required meticulous planning, organization, and adaptability. These skills directly correlate to 
+							software development, where project management, agile methodologies, and the ability to adapt to changing 
+							requirements are paramount. Additionally, my experience in leveraging technology for farming operations exposed me to 
+							the intersection of agriculture and software engineering, fostering my interest in utilizing technology to optimize 
+							processes.</p>
+					</div>
+			</div>
+
+			
+	</body>
+</html>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+				content.style.maxHeight = null;
+				} else {
+				var childrensHeight = Array.from(content.querySelectorAll(".content")).reduce((accumulator, currentValue) => accumulator + currentValue.scrollHeight , 0);
+				content.style.maxHeight = (content.scrollHeight + childrensHeight)+ "px";
+				} 
+			});
+			}
+			</script>
+		

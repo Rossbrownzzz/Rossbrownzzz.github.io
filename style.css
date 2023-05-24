@@ -22,7 +22,7 @@
         --navBar_color: #191f27;
         --navBar_hover_color: #212935;
         --collapsible_color: #13233A;
-        --open_collapsible_color: #1c3453;
+        --open_collapsible_color: #264875;
     }
   }
 
@@ -36,10 +36,19 @@
   }
 */
 
+#pdf-iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+  }
+
 *{
     font-family: Arial, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
 
 ul {
     list-style-type: none;
