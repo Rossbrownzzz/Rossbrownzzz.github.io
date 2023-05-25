@@ -3,7 +3,7 @@
 	<link href="style.css" rel="stylesheet">
 
 
-	<title>Ross Brown Resumé</title>
+	<title>About Ross</title>
     <body>
 		
         <ul>
@@ -18,7 +18,7 @@
 
 		<button class="collapsible">Internship With John Deere</button>
 			<div class="content">
-				<img src="resources/DeereTeam.jpg" style="float:right; padding-left: 10px; padding-right: 10px;" width="35%">
+				<img src="resources/DeereTeam.jpg" style="float:right; padding-left: 10px; padding-right: 10px;" width="35%"/>
 				<p>
 					I had the opportunity to work as a software development engineer intern at John Deere in the summer of 2022. I worked on two 
 					projects, one in machine learning and the other in cyber-security.
@@ -47,7 +47,7 @@
 
 		<button class="collapsible">Undergraduate Research</button>
 			<div class="content">
-				<button class="collapsible">Gomes Lab</button>
+				<button class="collapsible">Molecular Property Prediction - Gomes Lab</button>
 					<div class="content">
 						<p>
 							I joined the Gomes lab in October of 2019 as an undergraduate research assistant. Our work largely focused on 
@@ -60,21 +60,51 @@
 							things like context prediction.
 						</p>
 					</div>
-				<button class="collapsible">Wang Lab</button>
+				<button class="collapsible">Atmospheric Data Prediction - Wang Lab</button>
 					<div class="content">
 						<p>lab 2</p>
 					</div>
 			</div>
 
-		<button class="collapsible">Course Projects</button>
+		<button class="collapsible">Projects</button>
 			<div class="content">
-				<button class="collapsible">Internet of Things</button>
+				<button class="collapsible">Computer Vision Device for the Blind and Visually Impaired - Capstone Project</button>
+					<div class="content">
+						<img src="resources/16b9SRdesign.jpg" style="float:left; padding-left: 10px; padding-right: 10px;" width="35%">
+						<p>
+							For my capstone design project in Spring 2023 I built a wearable computer vision device in a team of four. The basic 
+							premise was to serve as a navigational aid for the blind and visually impaired to help them in areas which rely on 
+							visual mediums to convey information. Most people are able to look at an intersection and figure out the locations of 
+							crosswalks and vehicles, but in the absence of visual stimulus that information can be difficult to obtain.
+						</p>
+						<p>
+							Our program ran on the Nvidia Jetson Nano, a small single board computer with a GPU. We used the Yolov5 computer 
+							vision model for our object detection, and the CoCo dataset for most of our classes. Some classes required us to 
+							manually label them, like crosswalks, since they weren’t present in CoCo. I used the “small” model architecture which
+							 has around 7 million parameters in it since it was the largest size I was able to fit into the RAM of the Nano while 
+							 still maintaining all other operations. The model was able to run each frame in around 120-150ms giving us somewhere 
+							 around 7fps usually.
+						</p>
+						<img src="resources/srdesign_Device.png"style="float:left; padding-left: 10px; padding-right: 10px;" width="35%">
+						<p>
+							The user had a glasses frame with a camera and buttons on it which connected to the Nano. The buttons would cycle 
+							through the classes available for detection and allow them to select which they wanted notifications for. We used a 
+							frame queue to track the presence of objects to avoid any erroneous announcement of misclassified objects. Once an 
+							object was detected and consistent, if the user had selected to be notified for it, an audio message would play from 
+							a Bluetooth earpiece mounted on the glasses to alert them of the type of object, number of them, and location (left, 
+							right, or center).
+						</p>
+						<a href="https://github.com/ultralytics/yolov5">Yolov5 model</a>
+						<br>	
+						<a href="https://cocodataset.org/#home">CoCo dataset</a>
+					</div>
+				<button class="collapsible">IoT Aquarium - Internet of Things</button>
 					<div class="content">
 						<p>
 							iot
 						</p>
 					</div>
-				<button class="collapsible">Machine Learning</button>
+				<button class="collapsible">Chest Disease Classification - Machine Learning</button>
 					<div class="content">
 						<embed src= "resources/Machine_Learning_Project_Report.pdf" style="float:right; padding-left: 10px; padding-right: 10px;" width= "50%" height="500px" type="application/pdf"></embed>
 						<p>
@@ -97,7 +127,7 @@
 							it was a great way to gain experience with convolutional neural networks.
 						</p>
 					</div>
-				<button class="collapsible">Embedded Systems</button>
+				<button class="collapsible">Bluetooth Controlled Rotational NERF Platform - Embedded Systems</button>
 					<div class="content">
 						<video width="50%" controls style="float:left; padding-left: 10px; padding-right: 10px;">
 							<source src="resources/es_proj.mp4" type="video/mp4">
@@ -118,19 +148,15 @@
 							zip ties.
 						</p>
 					</div>
-				<button class="collapsible">Database Systems</button>
+				<button class="collapsible">Pokémon Data Website - Database Systems</button>
 					<div class="content">
 						<p>
 							website data fetcher Spring 2022
 						</p>
 					</div>
-				<button class="collapsible">Software Design</button>
-					<div class="content">
-						<p>Trivia game</p>
-					</div>
 			</div>
 
-		<button class="collapsible">Past Employment</button>
+		<button class="collapsible">Past Employment (non-engineering)</button>
 			<div class="content">
 				<button class="collapsible">Plumber</button>
 					<div class="content">
