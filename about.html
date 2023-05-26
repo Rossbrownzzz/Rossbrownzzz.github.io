@@ -18,9 +18,9 @@
 
 		<button class="collapsible">Internship With John Deere</button>
 			<div class="content">
-				<img src="resources/DeereTeam.jpg" style="float:right; padding-left: 10px; padding-right: 10px;" width="35%"/>
+				<img src="resources/DeereTeam.jpg" style="float:right; padding-left: 10px; padding-right: 10px;" width="36%"/>
 				<p>
-					I had the opportunity to work as a software development engineer intern at John Deere in the summer of 2022. I worked on two 
+					I had the opportunity to work as a software development intern at John Deere in the summer of 2022. I worked on two 
 					projects, one in machine learning and the other in cyber-security.
 				</p>
 				<p>
@@ -39,7 +39,7 @@
 				</p>
 				<p>
 					The second project that I took on was resolving some of the cyber-security vulnerabilities facing the team. Across the 
-					teams 6 web applications developed over 10 years ago I was able to resolve around 500 cyber-security vulnerabilities. The 
+					teams 6 web applications I was able to resolve around 500 cyber-security vulnerabilities of varying severity. The 
 					resolution I found most interesting was using prepared statements in place of SQL queries to circumvent SQL injection 
 					attempts by compiling the query before parameters are added and the query is executed.
 				</p>
@@ -51,18 +51,31 @@
 					<div class="content">
 						<p>
 							I joined the Gomes lab in October of 2019 as an undergraduate research assistant. Our work largely focused on 
-							molecular property prediction using neural networks. Initially we worked on predicting carbon monoxide
-							binding energies on different catalytic surfaces as a step in carbon dioxide breakdown. Our models were created in 
-							PyTorch and trained on data like the Open Quantum Materials Database.
+							molecular property prediction using neural networks on graph representations of molecules. Initially we worked on 
+							predicting carbon monoxide binding energies on different catalytic surfaces as a step in carbon dioxide breakdown. 
+							Our models were created in PyTorch and trained on data like the Open Quantum Materials Database.
 						</p>
 						<p>
 							We used supervised and self-supervised pretraining methods to improve the perofrmance of our neural network including
-							things like context prediction.
+							things like context prediction and graph node masking. With Context prediction we would select a node in the graph
+							and take a neighborhood of the node as the starting point. We then predicted the context which is the other nodes
+							between the edge of the neighborhood and the predifined edge of context prediction. Graph node masking involves
+							retaining all information except the molecules we are predicting.
+						</p>
+						<p>
+							Pretraining even on unrelated tasks can provide a large increase in performance since the model will still get
+							information about relationships which may be present in the data. We also used Bayesian optimization to improve
+							performance by finding optimal configurations of hyperparameters for the model. With each model being constructed
+							differently the number of hyperparameters can become quite large, making manually tuning them a very labor intensive
+							process.
 						</p>
 					</div>
 				<button class="collapsible">Atmospheric Data Prediction - Wang Lab</button>
 					<div class="content">
-						<p>lab 2</p>
+						<p>
+							I joined the Wang lab in the Summer of 2021 as an undergraduate research assistant. We worked on two projects, 
+							lookup table replacement and cloud cover prediction. The lookup table was used to 
+						</p>
 					</div>
 			</div>
 
@@ -95,13 +108,29 @@
 							right, or center).
 						</p>
 						<a href="https://github.com/ultralytics/yolov5">Yolov5 model</a>
-						<br>	
+						<br><br>
 						<a href="https://cocodataset.org/#home">CoCo dataset</a>
 					</div>
 				<button class="collapsible">IoT Aquarium - Internet of Things</button>
 					<div class="content">
+						
+						<img src="resources/IOT_tank.png"style="float:left; padding-left: 10px; padding-right: 10px;" width="35%">
 						<p>
-							iot
+							In my Internet of Things course, I created a cutting-edge IoT aquarium equipped with automation and alerts to assist 
+							users in caring for their fish. Powering this advanced system was a Raspberry Pi, which incorporated a range of 
+							sensors to monitor crucial factors such as flow rate, water level, and temperature within the tank. To provide a 
+							seamless user experience, I developed a user interface using React JS, which was hosted on AWS. To ensure maximum 
+							security, we implemented an AWS authenticator, preventing unauthorized access to the fish controls.
+						</p>
+						<p>
+							The website featured real-time graphs that displayed time-based data for each sensor, dynamically updating every 5 
+							seconds. These graphs retrieved information from InfluxDB, our chosen database for storing time series data. For 
+							persistent flags and non-timed data, we utilized Firebase, enabling both the web app and the Raspberry Pi to access 
+							the necessary information upon initialization. Through the website, users could easily configure desired values for 
+							each sensor. In the event that any of the readings fell below the specified threshold, the user would receive an 
+							instant text notification, ensuring timely intervention. Furthermore, the Raspberry Pi had the capability to activate 
+							or deactivate a USB heater, if the user opted for automatic control. This feature maintained the tank's temperature at 
+							the user's preferred setting, providing optimal conditions for the fish.
 						</p>
 					</div>
 				<button class="collapsible">Chest Disease Classification - Machine Learning</button>
